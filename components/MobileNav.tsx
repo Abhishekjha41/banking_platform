@@ -14,6 +14,7 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
+import Footer from './Footer';
 const MobileNav = ({ user }:MobileNavProps) => {
     const pathname = usePathname();
   return (
@@ -30,8 +31,8 @@ const MobileNav = ({ user }:MobileNavProps) => {
         </SheetTrigger>
         <SheetContent side="left" className='border-none bg-white'>
             <Link href="/" className="cursor-pointer items-center gap-1 px-4 flex">
-            <Image src="/icons/logo.svg" width={34} height={34} alt='Bankify Logo'/>
-            <h1 className='text-26 font-ibm-plex-serif font-bold text-black-1'>Bankify</h1>
+                <Image src="/icons/logo.svg" width={34} height={34} alt='Bankify Logo'/>
+                <h1 className='text-26 font-ibm-plex-serif font-bold text-black-1'>Bankify</h1>
             </Link>
             <div className='mobileb=nav-sheet'>
                 <SheetClose asChild>
@@ -63,7 +64,7 @@ const MobileNav = ({ user }:MobileNavProps) => {
                     </nav>
                 </SheetClose>
 
-                FOOTER
+                <Footer user={user} type="mobile"/>
             </div>
             
         </SheetContent>
