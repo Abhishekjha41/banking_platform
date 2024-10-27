@@ -106,7 +106,8 @@
 
   /* Home */
   .home {
-    @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+    @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen
+    max-xl:overflow-y-scroll;
   }
 
   .home-content {
@@ -122,7 +123,8 @@
   }
 
   .total-balance-chart {
-    @apply flex size-full max-w-[100px] items-center sm:max-w-[120px];
+    /* @apply flex size-full max-w-[100px] items-center sm:max-w-[120px]; */
+    @apply w-24 h-24;
   }
 
   .total-balance-label {
