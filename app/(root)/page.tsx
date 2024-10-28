@@ -27,7 +27,7 @@ const Home =async () => {
 
           RECENT TRANSACTIONS
       </div>
-      {/* <RightSidebar user={loggedIn} transactions={[]} banks={[{currentBalance: 123.50},{currentBalance: 500.50}]}/> */}
+      <RightSidebar user={loggedIn} transactions={[]} banks={[{currentBalance: 123.50},{currentBalance: 500.50}]}/>
     </section>
   )
 }
