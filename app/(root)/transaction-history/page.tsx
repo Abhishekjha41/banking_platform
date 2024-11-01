@@ -6,8 +6,14 @@ import { getLoggedInUser } from '@/lib/actions/user.actions';
 import { formatAmount } from '@/lib/utils';
 import React from 'react';
 
-const TransactionHistory = async ({ searchParams: { id, page } }: SearchParamProps) => {
-  
+const TransactionHistory = async (props: SearchParamProps) => {
+  const searchParams = await props.searchParams;
+
+  const {
+    id,
+    page
+  } = searchParams;
+
   const currentPage = Number(page) || 1;
   const loggedIn = await getLoggedInUser();
   const accounts = await getAccounts({ userId: loggedIn.$id });
@@ -67,7 +73,7 @@ const TransactionHistory = async ({ searchParams: { id, page } }: SearchParamPro
         </div>
 
         <section className="flex w-full flex-col gap-6">
-          {/* <TransactionsTable transactions={currentTransactions} /> */}
+          <TransactionsTable transactions={currentTransactions} />
           <div className="my-4 w-full">
             <Pagination totalPages={totalPages} page={currentPage} />
           </div>

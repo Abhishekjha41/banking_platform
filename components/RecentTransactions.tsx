@@ -18,7 +18,7 @@ const RecentTransactions = ({
     const indexOfLastTransaction = page * rowsPerPage;
     const indexOfFirstTransaction = indexOfLastTransaction- rowsPerPage;
 
-    const currentTransactions = transactions.slice(indexOfFirstTransaction, indexOfLastTransaction)
+    const currentTransactions = transactions.slice(indexOfFirstTransaction, indexOfLastTransaction);
 
   return (
     <section className='recent-transactions'>

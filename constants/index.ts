@@ -49,7 +49,7 @@ export const ITEMS = [
   },
 ];
 
-export const topCategoryStyles = {
+export const topcategoryStyles = {
   "Food and Drink": {
     bg: "bg-blue-25",
     circleBg: "bg-blue-100",

@@ -6,7 +6,14 @@ import { getAccount, getAccounts } from '@/lib/actions/bank.actions';
 import { getLoggedInUser } from '@/lib/actions/user.actions';
 import React from 'react'
 
-const Home =async ( { searchParams: { id, page } }: SearchParamProps) => {
+const Home =async (props: SearchParamProps) => {
+  const searchParams = await props.searchParams;
+
+  const {
+    id,
+    page
+  } = searchParams;
+
   const currentPage = Number(page as string) || 1;
   const loggedIn = await getLoggedInUser();
   const accounts = await getAccounts({
@@ -19,7 +26,7 @@ const Home =async ( { searchParams: { id, page } }: SearchParamProps) => {
   const appwriteItemId = (id as string) || accountsData[0]?.appwriteItemId;
 
   const account = await getAccount({ appwriteItemId })
-  
+
   // console.log({
   //   accountsData,
   //   account
@@ -46,7 +53,7 @@ const Home =async ( { searchParams: { id, page } }: SearchParamProps) => {
 
           <RecentTransactions 
             accounts = {accountsData}
-            transactions = {accounts?.transactions}
+            transactions = {account?.transactions}
             appwriteItemId = {appwriteItemId}
             page={currentPage}
           />

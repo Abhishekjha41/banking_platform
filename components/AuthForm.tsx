@@ -98,9 +98,9 @@ const AuthForm = ( { type }:{type : string}) => {
                 <Image src="/icons/logo.svg" 
                     width={34}
                     height={34}
-                    alt='Bankify Logo'
+                    alt='HORIZON Logo'
                 />
-                <h1 className='text-26 font-ibm-plex-serif font-bold text-black-1'>Bankify</h1>
+                <h1 className='text-26 font-ibm-plex-serif font-bold text-black-1'>HORIZON</h1>
             </Link>
 
             <div className='flex flex-col gap-1 md:gap-3'>

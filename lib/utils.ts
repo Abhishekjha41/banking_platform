@@ -132,7 +132,7 @@ export function getAccountTypeColors(type: AccountTypes) {
 
 export function countTransactionCategories(
   transactions: Transaction[]
-): CategoryCount[] {
+): categoryCount[] {
   const categoryCounts: { [category: string]: number } = {};
   let totalCount = 0;
 
@@ -155,7 +155,7 @@ export function countTransactionCategories(
     });
 
   // Convert the categoryCounts object to an array of objects
-  const aggregatedCategories: CategoryCount[] = Object.keys(categoryCounts).map(
+  const aggregatedCategories: categoryCount[] = Object.keys(categoryCounts).map(
     (category) => ({
       name: category,
       count: categoryCounts[category],
